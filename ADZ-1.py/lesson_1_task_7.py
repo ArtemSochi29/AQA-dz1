@@ -28,5 +28,4 @@ def func_9():
 def func_0():
     print("0")
 
-
 print(func_8)
