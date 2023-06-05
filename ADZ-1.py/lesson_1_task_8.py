@@ -1,5 +1,6 @@
 def func():
     print("num ")
+
     
 func()      
 func() 
