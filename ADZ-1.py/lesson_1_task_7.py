@@ -11,7 +11,7 @@ def func_4():
     print("4")
 
 def func_5():
-    print("5")
+    print("5", end="55" )
 
 def func_6():
     print("6")
@@ -20,13 +20,13 @@ def func_7():
     print("7")
 
 def func_8():
-    print("8", end="")
+    print("8", end="8")
 
 def func_9():
     print("9")
 
 def func_0():
-    print("0")
+    print("0", end="0")
 
 
-print(func_8)
+print(func_8, func_0, func_5, func_3, func_5, func_3, func_5 )
