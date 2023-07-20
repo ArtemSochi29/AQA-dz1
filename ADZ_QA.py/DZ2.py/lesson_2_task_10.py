@@ -3,9 +3,9 @@
 # Задача: написать функцию bank, принимающую аргументы X и Y и возвращающую сумму, которая будет на счету пользователя спустя Y лет
 
 
-x = int(input())
-y = int(input())
-m = int(input())
+x = input()
+y = input()
+m = 0
 
 def bank(x, m, y):
         nal = x
@@ -18,4 +18,4 @@ def bank(x, m, y):
             else:
                 return nal
 
-print (m)
+print (m, int(input()))

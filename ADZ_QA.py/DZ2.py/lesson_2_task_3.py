@@ -6,4 +6,4 @@ def square(a):
 	s = a * a
 	return s
 	
-print(square(math.ceil(1.21)))
+print(math.ceil(square(1.21)))
