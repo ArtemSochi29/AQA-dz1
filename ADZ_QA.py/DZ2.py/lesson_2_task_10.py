@@ -3,19 +3,13 @@
 #№ Задача: написать функцию bank, принимающую аргументы X и Y и возвращающую сумму, которая будет на счету пользователя спустя Y лет
 
 
-x = input()
-y = input()
-m = 0
+x = int(input("Сумма вклада: "))
+y = int(input("Срок вклада: "))
+def bank(x, y):
+    length = len(range(1, y+1, 1))
+    result = x
+    for x in range (1, length+1):
+        result = result + result*0.1
+    return(result)
 
-def bank(x, m, y):
-        nal = x
-        year = y
-        def money():
-            if year > 0:
-                nal = x * 1.1 + m
-                year = year -1
-                return money()
-            else:
-                return nal
-
-print (m, int(input()))
+print("Сумма вклада через ", y, "лет составит", round(bank(x, y),2), "рублей")
