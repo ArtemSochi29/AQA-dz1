@@ -1,7 +1,7 @@
 class Mailing:
 
-    to_address = 'unknown'
-    from_address = 'unknown'
+    to_address = 'Address'
+    from_address = 'Address'
     cost = 'unknown'
     track = '000'
 
