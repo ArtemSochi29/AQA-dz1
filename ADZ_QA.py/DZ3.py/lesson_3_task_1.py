@@ -1,2 +1,4 @@
 from Muser import User
-from user import User
+
+my_user = User("Ivan", "Ivanov", "Ivan Ivanov")
+
