@@ -1,16 +1,13 @@
 class User:
-    def __init__(self, first, last):
-        self.first_name = first
-        self.last_name = last
+    def __init__(self, first_name, last_name):
+        self.name1 = first_name
+        self.name2 = last_name
 
-    def first(self):
-        """ Имя """
-        print ("Ivan")
-    
-    def last(self):
-        """ Фамилия """
-        print ("Ivanov")
-    
-    def first_last(self):
-        """Имя и фамилия"""
-        print ("Ivan Ivanov")
+    def sayName(self):
+        print("Имя: ", self.name1)
+
+    def sayFamily(self):
+        print("Фамилия: ", self.name2)
+
+    def sayNameFamily(self):
+        print("Имя, Фамилия: ", self.name1, self.name2)

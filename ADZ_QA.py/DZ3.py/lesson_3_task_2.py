@@ -2,37 +2,36 @@ from smartphone import Smartphone
 
 catalog = ["Aphone 10", "Aphone 11", "Aphone 12", "Aphone13", "Aphone 14"]
 
+my_catalog1 = Smartphone ("Apple", "Aphone 10", "8-800-000-00-10")
+
+my_catalog1.sayBrand()
+my_catalog1.sayModel()
+my_catalog1.sayNumber()
+
+my_catalog2 = Smartphone ("Apple", "Aphone 11", "8-800-000-00-11")
+
+my_catalog2.sayBrand()
+my_catalog2.sayModel()
+my_catalog2.sayNumber()
+
+my_catalog3 = Smartphone ("Apple", "Aphone 12", "8-800-000-00-12")
+
+my_catalog3.sayBrand()
+my_catalog3.sayModel()
+my_catalog3.sayNumber()
+
+my_catalog4 = Smartphone ("Apple", "Aphone 13", "8-800-000-00-13")
+
+my_catalog4.sayBrand()
+my_catalog4.sayModel()
+my_catalog4.sayNumber()
+
+my_catalog5 = Smartphone ("Apple", "Aphone 14", "8-800-000-00-14")
+
+my_catalog5.sayBrand()
+my_catalog5.sayModel()
+my_catalog5.sayNumberadd()
 
 
-Smartphone.brand1(self=1)
-Smartphone.model1(self=1)
-Smartphone.number1(self=1)
-
-Smartphone.brand2(self=1)
-Smartphone.model2(self=1)
-Smartphone.number2(self=1)
-
-Smartphone.brand3(self=1)
-Smartphone.model3(self=1)
-Smartphone.number3(self=1)
-
-Smartphone.brand4(self=1)
-Smartphone.model4(self=1)
-Smartphone.number4(self=1)
-
-Smartphone.brand5(self=1)
-Smartphone.model5(self=1)
-Smartphone.number5(self=1)
 
 
-
-
-
-
-
-
-
-
-
-phone = Smartphone("Apple", "Aphone 10", "8 900 000 00 10" )
-print("Марка-", phone.phone_brand, "Модель-", phone.phone_model, "Номер телефона-", phone.phone_number ) 

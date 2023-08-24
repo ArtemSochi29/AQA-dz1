@@ -1,13 +1,33 @@
 class Address:
 
-    def __init__(self, index, city, street, house):
+    def __init__ (self, index, city, street, house, flat):
         self.index = index
         self.city = city
         self.street = street
         self.house = house
+        self.flat = flat
 
-    def ttrack (self, track):
-        self.track = track
+    def sayIndex(self):
+        print("Индекс -", self.index)
 
-    def ctrack (self):
-        return self.track
+    def setIndex(self, newIndex):
+        self.index = newIndex
+
+    def sayCity(self):
+        print("Город -", self.city)
+
+    def sayStreet(self):
+        print("Улица -", self.street)
+
+    def sayHouse(self):
+        print("Дом -", self.house)
+
+    def sayFlat(self):
+        print("Квартира -", self.flat)
+
+    def addCard(self, card):
+        self.card = card
+
+    def getCard(self):
+        return self.card
+
