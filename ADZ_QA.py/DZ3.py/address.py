@@ -1,6 +1,8 @@
 class Address:
 
-    def __init__ (self, index, city, street, house, flat):
+
+
+    def init (self, index, city, street, house, flat):
         self.index = index
         self.city = city
         self.street = street
@@ -8,26 +10,30 @@ class Address:
         self.flat = flat
 
     def sayIndex(self):
-        print("Индекс -", self.index)
+        print("из индекс", self.index)
 
     def setIndex(self, newIndex):
         self.index = newIndex
+        print("в индекс", newIndex)
 
     def sayCity(self):
-        print("Город -", self.city)
+        print("город", self.city)
 
     def sayStreet(self):
-        print("Улица -", self.street)
+        print("улица", self.street)
+
+    def setStreet(self, nawStreet):
+        self.street = nawStreet
 
     def sayHouse(self):
-        print("Дом -", self.house)
+        print("дом", self.house)
+
+    def setHouse(self, nawHouse):
+        self.house = nawHouse
 
     def sayFlat(self):
-        print("Квартира -", self.flat)
+        print("квартира", self.flat)
 
-    def addCard(self, card):
-        self.card = card
-
-    def getCard(self):
-        return self.card
+    def setFlat (self, nawFlat):
+        self.flat = nawFlat
 

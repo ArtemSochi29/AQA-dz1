@@ -30,8 +30,7 @@ my_catalog5 = Smartphone ("Apple", "Aphone 14", "8-800-000-00-14")
 
 my_catalog5.sayBrand()
 my_catalog5.sayModel()
-my_catalog5.sayNumberadd()
-
+my_catalog5.sayNumber()
 
 
 

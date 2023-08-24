@@ -4,23 +4,27 @@ from mailing import Mailing
 
 address = Address ("100100", "Kirov", "Lenin", "100", "1")
 
-#address.sayIndex()
-#address.sayCity()
-#address.sayStreet()
-#address.sayHouse()
-#address.sayFlat() 
 
+mailing = Mailing ("Kirov", "Moskov", "1000", "Трек 111")
 
-
-mailing = Mailing ("Kirov", "Moskov", "1000", "100")
-
-mailing.sayTo_address()
-mailing.setFrom_address()
-mailing.sayCost()
 mailing.sayTrack()
+address.sayIndex()
+mailing.sayTo_address()
+address.sayStreet()
+address.sayHouse()
+address.sayFlat()
 
-address.addCard(mailing)
-address.getCard().pay(1000)
+address.setIndex(200200)
+mailing.setFrom_address()
+address.setStreet("kerch")
+address.sayStreet()
+address.setHouse(20)
+address.sayHouse()
+address.setFlat(6)
+address.sayFlat()
+
+
+mailing.pay(1000)
 
 
 
