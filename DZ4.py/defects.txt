@@ -1,0 +1,54 @@
+Баг-репорт
+Функция для разделения двух слов дифисом и запятой работает некоректно, ставит дифис и запятую после каждого символа.
+ Функция
+ def list_to_string(self, lst: list, joiner=", ") -> str:
+        """
+        Преобразует список элементов в строку с указанным разделителем \n 
+        Параметры: \n 
+            `lst` - список элементов \n
+            `joiner` - разделитель элементов в строке. По умолчанию запятая (", ") \n
+        Пример 1: `list_to_string([1,2,3,4]) -> "1, 2, 3, 4"`
+        Пример 2: `list_to_string(["Sky", "Pro"]) -> "Sky, Pro"`
+        Пример 3: `list_to_string(["Sky", "Pro"], "-") -> "Sky-Pro"`
+        """
+        string = ""
+        length = len(lst)
+        
+        if length == 0: 
+            return string 
+        
+        for i in range(0, length-1):
+            string += str(lst[i]) + joiner
+        
+        return string + str(lst[-1])
+
+Проверка 
+@pytest.mark.parametrize('lst, joiner, result', [("1,2,3,4", ",", "1,2,3,4" ), ("Artem, Bas", ",","Artem, Bas"), ("Artem, Bas", "-", "Artem-Bas" )])
+
+def test_list_to_string(lst, joiner, result):
+    stringUtils = StringUtils()
+    res = stringUtils.list_to_string(lst, joiner)
+    assert res == result
+
+Результат
+ @pytest.mark.parametrize('lst, joiner, result', [("1,2,3,4", ",", ["1,2,3,4"] ), ("Artem, Bas", ",","[Artem, Bas]"), ("Bas", "-", "B-a-s" )])
+    
+    def test_list_to_string(lst, joiner, result):
+        stringUtils = StringUtils()
+        res = stringUtils.list_to_string(lst, joiner)
+>       assert res == result
+E       AssertionError: assert 'A,r,t,e,m,,, ,B,a,s' == '[Artem, Bas]'
+E         - [Artem, Bas]
+E         + A,r,t,e,m,,, ,B,a,s
+
+DZ4.py/test_string_utils.py:60: AssertionError
+
+@pytest.mark.parametrize('lst, joiner, result', [("1,2,3,4", ",", ["1,2,3,4"] ), ("Artem, Bas", ",","[Artem, Bas]"), ("Bas", "-", "B-a-s" )])
+    
+    def test_list_to_string(lst, joiner, result):
+        stringUtils = StringUtils()
+        res = stringUtils.list_to_string(lst, joiner)
+>       assert res == result
+E       AssertionError: assert '1,,,2,,,3,,,4' == ['1,2,3,4']
+
+DZ4.py/test_string_utils.py:60: AssertionError
