@@ -4,7 +4,7 @@ class Calculator:
         result = a+b
         return result
     
-    def sum(self, a,b):
+    def sub(self, a,b):
         result = a-b
         return result
     
