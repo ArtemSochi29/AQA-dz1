@@ -33,7 +33,7 @@ entry_field.clear()
 # Введите в это же поле текст `999`.
 entry_field.send_keys("999")
 
-# Задание 7
+# Задание 8
 # Откройте страницу http://the-internet.herokuapp.com/login.
 driver.get("http://the-internet.herokuapp.com/login")
 

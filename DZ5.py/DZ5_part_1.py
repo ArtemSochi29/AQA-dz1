@@ -18,12 +18,13 @@ driver.get("http://the-internet.herokuapp.com/add_remove_elements/")
 
 # 2 Пять раз кликните на кнопку Add Element.
 button_loc = "//*[@id='content']/div/button"
-click_button = driver.find_element(By.XPATH, button_loc).click()
-click_button = driver.find_element(By.XPATH, button_loc).click()
-click_button = driver.find_element(By.XPATH, button_loc).click()
-click_button = driver.find_element(By.XPATH, button_loc).click()
-click_button = driver.find_element(By.XPATH, button_loc).click()
-
+driver.find_element(By.XPATH, button_loc).click()
+driver.find_element(By.XPATH, button_loc).click()
+driver.find_element(By.XPATH, button_loc).click()
+driver.find_element(By.XPATH, button_loc).click()
+driver.find_element(By.XPATH, button_loc).click()
+#for iterator in range(5):
+#    driver.find_element(By.XPATH, button_loc).click()
 # 3 Соберите со страницы список кнопок Delete.
 element_loc = ("button[onclick='deleteElement()']")
 elements = driver.find_elements(By.CSS_SELECTOR, element_loc)
