@@ -3,11 +3,10 @@ from selenium import webdriver   #  Браузер
 
 driver = webdriver.Chrome()
 
-driver.get("https://rzd.ru")
+driver.get("http://ya.ru")
 
-current_title = driver.title
+url = driver.current_url
 
-print(current_title)
+print(url)
 
 driver.quit()
-
