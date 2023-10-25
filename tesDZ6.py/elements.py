@@ -4,12 +4,12 @@ from selenium import webdriver   #  Браузер
 
 driver = webdriver.Chrome()
 
-#driver.get("https://ya.ru")
+driver.get("https://ya.ru")
 
 #driver.find_elements()    # найти элементы
 
-#txt = driver.find_element(By.CSS_SELECTOR, 'a[title="USD MOEX"]').text
-#print(txt)
+txt = driver.find_element(By.CSS_SELECTOR, 'a[title="USD MOEX"]').text
+print(txt)
 
 #tag = driver.find_element(By.CSS_SELECTOR, 'a[title="USD MOEX"]').tag_name
 #print(tag)
@@ -26,8 +26,8 @@ driver = webdriver.Chrome()
 
 #color = driver.find_element(By.CSS_SELECTOR, 'a[title="USD MOEX"]').value_of_css_property("color")
 #print(color)
-# txt = usd.text
-
+#txt = usd.text
+#sleep(10)
 #driver.get("http://uitestingplayground.com/visibility")
 #is_displayed = driver.find_element(By.CSS_SELECTOR, "#transparentButton").is_displayed() #видно элемент или нет
 #print(is_displayed)
@@ -67,14 +67,14 @@ driver = webdriver.Chrome()
 
 #print(a.get_attribute("href"))  # поиск ссылки
 
-driver.get("https://the-internet.herokuapp.com/checkboxes")
-divs = driver.find_elements(By.CSS_SELECTOR, 'div')
+#driver.get("https://the-internet.herokuapp.com/checkboxes")
+#divs = driver.find_elements(By.CSS_SELECTOR, 'div')
 
 #l = len(divs) # строка
 
 #print(l)
 
-div = divs[6]
-css_class = div.get_attribute("class")
+#div = divs[6]
+#css_class = div.get_attribute("class")
 
-print(css_class)
+#print(css_class)
