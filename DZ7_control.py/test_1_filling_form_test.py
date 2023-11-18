@@ -9,7 +9,7 @@ wait = WebDriverWait(driver, 20)
 
 driver.get("https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
 
-first = driver.find_element(By.CSS_SELECTOR, "body > main > div > form > div:nth-child(1) > div:nth-child(1) > label > input").send_keys("Иван")
+driver.find_element(By.CSS_SELECTOR, "body > main > div > form > div:nth-child(1) > div:nth-child(1) > label > input").send_keys("Иван")
 
 last = driver.find_element(By.CSS_SELECTOR, "body > main > div > form > div:nth-child(1) > div:nth-child(2) > label > input").send_keys("Петров")
 
@@ -36,5 +36,13 @@ wait.until(
 color_red = driver.find_element(By.CSS_SELECTOR, "#zip-code").value_of_css_property("color")
 print(color_red)
 
+def test_color_red():
+    assert color_red == 'rgba(132, 32, 41, 1)'
+
 color_green = driver.find_element(By.CSS_SELECTOR, ".py-2.alert-success").value_of_css_property("color")
 print(color_green)
+
+def test_color_green():
+    assert color_green == 'rgba(15, 81, 50, 1)'
+
+
