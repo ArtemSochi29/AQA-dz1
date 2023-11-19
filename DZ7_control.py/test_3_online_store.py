@@ -36,6 +36,11 @@ driver.find_element(By.CSS_SELECTOR, "#postal-code" ).send_keys("600600")
 driver.find_element(By.CSS_SELECTOR, "#continue" ).click()
 
 # Прочитайте со страницы итоговую стоимость ( Total )
+asa = driver.find_element(By.CSS_SELECTOR, "#checkout_summary_container" ).text
+print(asa)
+asa = driver.find_element(By.CSS_SELECTOR, "#checkout_summary_container" )
+txt = asa.find_element(By.CSS_SELECTOR, "#checkout_summary_container > div > div.summary_info > div.summary_info_label.summary_total_label").text
+print(txt)
 
 # Закройте браузер.
 driver.find_element(By.CSS_SELECTOR, "#finish").click()

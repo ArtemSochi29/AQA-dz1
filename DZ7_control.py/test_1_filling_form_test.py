@@ -39,10 +39,12 @@ print(color_red)
 def test_color_red():
     assert color_red == 'rgba(132, 32, 41, 1)'
 
-color_green = driver.find_element(By.CSS_SELECTOR, ".py-2.alert-success").value_of_css_property("color")
-print(color_green)
+color_green = driver.find_elements(By.CSS_SELECTOR, ".py-2.alert-success")
+#color_green = driver.find_element(By.CSS_SELECTOR, ".py-2.alert-success").value_of_css_property("color")
+color_green_count = len(color_green)
+print(color_green_count)
 
 def test_color_green():
-    assert color_green == 'rgba(15, 81, 50, 1)'
+    assert color_green_count == 'rgba(15, 81, 50, 1)'
 
 
