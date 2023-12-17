@@ -1,9 +1,12 @@
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By   
-from selenium import webdriver  
-from selenium.webdriver.common.keys import Keys   # кнопки
-from time import sleep
+from selenium.webdriver.common.keys import Keys 
+
 
 cookie = {   # убераем окно с куки
         "name": "cookie_policy",
@@ -19,10 +22,10 @@ def open_labirint():
     driver.maximize_window()   # Браузер на весь экран
     driver.add_cookie(cookie) # убераем окно с куки
 
-def search(tern):
+def search(term):
 #Найти все книги по слову Python
     search_input = driver.find_element(By.CSS_SELECTOR, "#search-field") # Найти эедемент
-    search_input.send_keys(tern, Keys.RETURN) # Нажать энтер
+    search_input.send_keys(term, Keys.RETURN) # Нажать энтер
 
 #def swich_to_table():
 #Переключиться на таблицу
@@ -56,11 +59,10 @@ def close_driver():
 #Закрыть браузер
     driver.quit()
 
-def est_cart_counter():
+def test_cart_counter():
     driver = webdriver.Chrome()
     open_labirint()
     search("Python")
-    #switch_to_table()
 
     added = add_books()
     go_to_cart()
@@ -69,7 +71,7 @@ def est_cart_counter():
 
     assert added == cart_counter
 
-def est_empty_search():
+def test_empty_search():
     open_labirint()
     search("no book search")
     txt = driver.find_elements(By.CSS_SELECTOR, "#right-inner")

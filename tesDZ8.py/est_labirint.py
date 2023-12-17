@@ -1,16 +1,19 @@
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By   
-from selenium import webdriver  
 from selenium.webdriver.common.keys import Keys   # кнопки
-from time import sleep
+
 
 cookie = {   # убераем окно с куки
         "name": "cookie_policy",
         "value": "1"
     } 
 
-def est_cart_counter():
+def test_cart_counter():
     driver = webdriver.Chrome()
 
     #Перейти на сайт лабиринт
@@ -50,11 +53,4 @@ def est_cart_counter():
 
 
 
-
-#
-
-#search_input = driver.find_element(By.CSS_SELECTOR, "#search-field")
-#search_input.send_keys("Python", Keys.RETURN)
-
-#books = driver.find_elements(By.CSS_SELECTOR, "div.product-card")
 
